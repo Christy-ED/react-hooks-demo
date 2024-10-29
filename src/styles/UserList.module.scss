@@ -1,0 +1,56 @@
+// Define some SCSS variables for consistent theming
+$card-background: var(--card-background);
+$text-color: var(--text-color);
+$border-color: var(--border-color);
+$link-color: var(--link-color);
+
+.container {
+    background-color: $card-background;
+    color: $text-color;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+
+    .heading {
+        color: $text-color;
+        margin-bottom: 20px;
+    }
+
+    .userGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .userCard {
+        background-color: $card-background;
+        color: $text-color;
+        padding: 15px;
+        border-radius: 8px;
+        cursor: pointer;
+        border: 1px solid $border-color;
+        text-align: center;
+        transition: transform 0.2s, background-color 0.3s;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+
+        &:hover {
+            transform: scale(1.05);
+        }
+
+        .userImage {
+            border-radius: 50%;
+            width: 80px;
+            height: 80px;
+            margin-bottom: 10px;
+        }
+
+        .userName {
+            font-weight: bold;
+            color: $link-color;
+        }
+    }
+}
